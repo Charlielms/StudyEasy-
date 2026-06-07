@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Easy — Контакты</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-row">
+            <a class="site-logo" href="index.html">Study Easy</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="flex-nav">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a class="is-active" href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1>Обратная связь</h1>
+            <p>Задайте вопрос, предложите идею или напишите, что можно улучшить.</p>
+        </div>
+    </header>
+
+    <main class="contact-page">
+        <div class="contact-layout">
+            <section class="profile-box">
+                <h2>Кто разработал сайт</h2>
+                <p><b>ФИО:</b> Арямкина Анна Николаевна</p>
+                <p><b>Email:</b> aryamkina.anna2008@yandex.ru</p>
+                <p><b>Направление:</b> помощь в обучении</p>
+                <p><b>Местоположение:</b> г. Москва</p>
+
+                <div class="links">
+                    <a href="https://t.me/mrscharliem">Telegram</a>
+                    <a href="https://vk.com/id809255019">VK</a>
+                    <a href="mailto:aryamkina.anna2008@yandex.ru">Почта</a>
+                </div>
+            </section>
+
+            <section class="form-box">
+                <h2>Написать сообщение</h2>
+                <form class="feedback-form">
+                    <div class="field">
+                        <label for="name">Ваше имя</label>
+                        <input id="name" type="text" placeholder="Например: Анна" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="example@mail.com" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="topic">Причина обращения</label>
+                        <select id="topic" required>
+                            <option value="">Выбрать...</option>
+                            <option>Вопрос по сайту</option>
+                            <option>Предложение</option>
+                            <option>Ошибка</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" rows="5" placeholder="Напишите ваш вопрос..." required></textarea>
+                    </div>
+
+                    <label class="agree" for="policy">
+                        <input id="policy" type="checkbox" required>
+                        <span>Согласен с обработкой персональных данных</span>
+                    </label>
+
+                    <button type="submit">Отправить сообщение</button>
+                </form>
+            </section>
+        </div>
+
+        <section class="extra-box">
+            <h2>Дополнительно</h2>
+
+            <div class="info-item">
+                <h3>Когда отвечаю?</h3>
+                <p>Обычно в течение одного дня.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>Где быстрее?</h3>
+                <p>Быстрее всего отвечаю в Telegram.</p>
+            </div>
+
+            <div class="info-item">
+                <h3>FAQ</h3>
+                <p>Все вопросы по обучению можно задавать через форму обратной связи.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <section class="footer-column">
+                <h3>Study Easy</h3>
+                <p>Учебный проект для удобного доступа к образовательным материалам.</p>
+            </section>
+            <section class="footer-column">
+                <h3>Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h3>Контакт</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:aryamkina.anna2008@yandex.ru">aryamkina.anna2008@yandex.ru</a></li>
+                    <li><a href="contacts.html">Форма обратной связи</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer-copy">&copy; 2026 Study Easy</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Easy — Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-row">
+            <a class="site-logo" href="index.html">Study Easy</a>
+            <nav class="site-nav" aria-label="Основная навигация">
+                <ul class="flex-nav">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a class="is-active" href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-content">
+            <h1><i class="fas fa-images" aria-hidden="true"></i> Фотогалерея</h1>
+            <p>Коллекция изображений по теме: <span class="theme-name">Учиться легко</span></p>
+        </div>
+    </header>
+
+    <main class="gallery-container">
+        <section class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image" aria-hidden="true"></i>
+                    Изображений: <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart" aria-hidden="true"></i>
+                    Всего лайков: <span id="total-likes">0</span>
+                </span>
+            </div>
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active" type="button">
+                    <i class="fas fa-th" aria-hidden="true"></i> Сетка
+                </button>
+                <button id="list-view" class="view-btn" type="button">
+                    <i class="fas fa-list" aria-hidden="true"></i> Список
+                </button>
+            </div>
+        </section>
+
+        <section class="filters">
+            <h2><i class="fas fa-filter" aria-hidden="true"></i> Фильтры</h2>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all" type="button">Все</button>
+                <button class="filter-btn" data-filter="nature" type="button">Сайты</button>
+                <button class="filter-btn" data-filter="city" type="button">Приложения</button>
+                <button class="filter-btn" data-filter="people" type="button">Материалы</button>
+            </div>
+        </section>
+
+        <div class="gallery-grid" id="image-gallery">
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/Записи.jpg" alt="Удобные конспекты" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="1" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Удобные конспекты</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 15 марта 2024</p>
+                    <p class="image-description">Структурированные заметки помогают повторять материал быстрее и не терять важные детали.</p>
+                    <div class="image-tags">
+                        <span class="tag">Сайты</span>
+                        <span class="tag">Материалы</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="images/Компактность.jpg" alt="Все для учебы в одном месте" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Все для учебы в одном месте</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 20 марта 2024</p>
+                    <p class="image-description">Современные приложения объединяют задания, заметки и напоминания в одном интерфейсе.</p>
+                    <div class="image-tags">
+                        <span class="tag">Приложения</span>
+                        <span class="tag">Материалы</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="people">
+                <div class="card-image">
+                    <img src="images/Мир в интернете.jpg" alt="Образование без границ" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="3" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Образование без границ</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 25 марта 2024</p>
+                    <p class="image-description">Интернет открывает доступ к курсам и видеоурокам из любой точки мира.</p>
+                    <div class="image-tags">
+                        <span class="tag">Материалы</span>
+                        <span class="tag">Сайты</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="images/Поиск.jpg" alt="Быстрый поиск информации" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="4" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Быстрый поиск нужной информации</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 2 апреля 2024</p>
+                    <p class="image-description">Проверенные образовательные ресурсы позволяют находить ответы быстрее.</p>
+                    <div class="image-tags">
+                        <span class="tag">Сайты</span>
+                        <span class="tag">Приложения</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="people">
+                <div class="card-image">
+                    <img src="images/Сосредоточенность.jpg" alt="Фокус на учебе" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="5" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Фокус на учебе</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 7 апреля 2024</p>
+                    <p class="image-description">Планировщики и таймеры помогают сосредоточиться и убрать отвлекающие факторы.</p>
+                    <div class="image-tags">
+                        <span class="tag">Материалы</span>
+                        <span class="tag">Приложения</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="images/Сферы.jpg" alt="Знания из разных областей" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="6" type="button" aria-label="Поставить лайк">
+                            <i class="far fa-heart" aria-hidden="true"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn" type="button" aria-label="Увеличить изображение">
+                            <i class="fas fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Знания из разных областей</h3>
+                    <p class="image-date"><i class="far fa-calendar" aria-hidden="true"></i> 12 апреля 2024</p>
+                    <p class="image-description">На Study Easy собраны материалы по разным предметам и направлениям.</p>
+                    <div class="image-tags">
+                        <span class="tag">Материалы</span>
+                        <span class="tag">Сайты</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <aside class="gallery-info">
+            <h3><i class="fas fa-lightbulb" aria-hidden="true"></i> Интересный факт</h3>
+            <p>Использование проверенных онлайн-ресурсов сокращает время на поиск информации и повышает эффективность обучения.</p>
+        </aside>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-columns">
+            <section class="footer-column">
+                <h3>Study Easy</h3>
+                <p>Учебный проект для удобного доступа к образовательным материалам.</p>
+            </section>
+            <section class="footer-column">
+                <h3>Разделы</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </section>
+            <section class="footer-column">
+                <h3>Контакт</h3>
+                <ul class="footer-links">
+                    <li><a href="mailto:aryamkina.anna2008@yandex.ru">aryamkina.anna2008@yandex.ru</a></li>
+                    <li><a href="contacts.html">Форма обратной связи</a></li>
+                </ul>
+            </section>
+        </div>
+        <p class="footer-copy">&copy; 2026 Анна. Все права защищены.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
